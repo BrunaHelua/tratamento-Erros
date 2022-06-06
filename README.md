@@ -81,3 +81,17 @@ verifica se tem algum erro entre as declaraçãoes do bloco try - se o pedaço d
   //colocar uma string vazia, vai retornar no console 'String inválida'. Aqui o tryCatch é true.      
   tryCatchExemplo('ala');  
   
+## Aula sobre objeto ERROR - customização de erros (usual para erros específicos)
+
+Estrutura do ERROR  
+ new Error(message, fileName, lineNumber)  
+ //parâmetros são opcionais. fileName, lineNumber não são padrões de navegador. Precisa prestar atenção na compatibilidade com cada navegador      
+ const  meuErro = new Error('Mensagem inválida');  //nova instância para o objeto meuErro
+ 
+ meuErro.name = 'InvalidMessage'; //primeiro exibe o nome do erro, depois executa throw;  
+ 
+ throw meuErro;  //vai lançar a mensagem do tipo erro     
+ 
+ meuErro.stack // exibe onde foi encontrado erro e o que foi executado  
+ 
+ 
